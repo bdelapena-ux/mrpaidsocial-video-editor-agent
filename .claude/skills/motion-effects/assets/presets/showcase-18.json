@@ -1,0 +1,334 @@
+{
+ "_style": "All 18 effects in a row with an 'effects in this video' checklist: a capability demo / effects-reel look.",
+ "_how": "Recipe: keep the effect ORDER and kinds; replace every time with the words' real times and every text with the script's own idea. See references/effects.md.",
+ "source": "src/base.mp4",
+ "words": "src/words.json",
+ "output": "out/<slug>_v1.mp4",
+ "brand": {
+  "primary": "#2b4c67",
+  "accent": "#e8b446",
+  "light": "#f4efe6",
+  "dark": "#181e26",
+  "font_bold": "fonts/Display-Bold.ttf",
+  "handle": "@yourhandle"
+ },
+ "layout": {
+  "caption_cy": 1270,
+  "zone_cy": 1560,
+  "top_y": 70,
+  "checklist_y": 300
+ },
+ "captions": {
+  "enabled": true,
+  "fix": {}
+ },
+ "sound": {
+  "sfx": true,
+  "sfx_db": -12,
+  "lufs": -15
+ },
+ "checklist": {
+  "enabled": true,
+  "footer": "18 effects \u00b7 52 seconds"
+ },
+ "effects": [
+  {
+   "type": "kinetic_hook",
+   "start": 0.0,
+   "end": 2.7,
+   "intro": [
+    "18 effects.",
+    "52 seconds."
+   ],
+   "lines": [
+    {
+     "text": "WE GREW",
+     "at": 0.15,
+     "size": 120
+    },
+    {
+     "text": "SALES",
+     "at": 1.1,
+     "size": 160
+    },
+    {
+     "text": "3X",
+     "at": 2.15,
+     "size": 250,
+     "color": "accent"
+    }
+   ]
+  },
+  {
+   "type": "gravity_drop",
+   "start": 2.7,
+   "end": 5.85,
+   "lead": {
+    "text": "and yet",
+    "at": 4.75
+   },
+   "groups": [
+    {
+     "text": "ONE YEAR",
+     "at": 2.9,
+     "size": 170,
+     "stagger": 0.05,
+     "dur": 0.6,
+     "exit": 4.5
+    },
+    {
+     "text": "NO PROFIT.",
+     "at": 4.95,
+     "size": 150,
+     "stagger": 0.04,
+     "dur": 0.45,
+     "exit": 5.62
+    }
+   ]
+  },
+  {
+   "type": "giant_captions",
+   "start": 5.85,
+   "end": 8.95,
+   "items": [
+    {
+     "word": "NOBODY",
+     "sub": "warns you.",
+     "at": 5.85
+    },
+    {
+     "word": "GROWTH",
+     "sub": "costs money.",
+     "at": 7.15
+    },
+    {
+     "word": "CASH",
+     "sub": "is king.",
+     "at": 7.95
+    }
+   ]
+  },
+  {
+   "type": "prompt_bar",
+   "start": 8.95,
+   "end": 11.5,
+   "text": "is revenue the same as profit?",
+   "type_at": 9.05,
+   "type_dur": 1.15,
+   "send_at": 10.3,
+   "answer": "Nope. Not even close.",
+   "answer_at": 10.5
+  },
+  {
+   "type": "file_drop",
+   "start": 11.5,
+   "end": 15.0,
+   "zone_text": "Drop every dollar you make",
+   "zone_text_after": "...and watch it leave",
+   "filename": "revenue.csv",
+   "sub": "$1.00 \u00b7 100%",
+   "sub_after": "going back out",
+   "drop_at": 12.25,
+   "after_at": 13.3,
+   "drain_at": 13.4
+  },
+  {
+   "type": "storyboard",
+   "start": 15.0,
+   "end": 18.55,
+   "header": "WHERE IT GOES",
+   "cards": [
+    {
+     "label": "ADS",
+     "at": 15.05,
+     "frame_t": 3
+    },
+    {
+     "label": "STAFF",
+     "at": 15.85,
+     "frame_t": 10
+    },
+    {
+     "label": "TOOLS",
+     "at": 16.55,
+     "frame_t": 22
+    },
+    {
+     "label": "RENT",
+     "at": 17.35,
+     "frame_t": 30
+    }
+   ]
+  },
+  {
+   "type": "jiggle_delete",
+   "start": 18.55,
+   "end": 20.55,
+   "delete_at": 19.55,
+   "icons": [
+    {
+     "label": "ADS",
+     "glyph": "$"
+    },
+    {
+     "label": "STAFF"
+    },
+    {
+     "label": "TOOLS"
+    },
+    {
+     "label": "RENT"
+    }
+   ]
+  },
+  {
+   "type": "icon_strike",
+   "start": 20.55,
+   "end": 24.45,
+   "word": {
+    "text": "forgot.",
+    "at": 23.65
+   },
+   "icons": [
+    {
+     "label": "SALES",
+     "dir": "up",
+     "at": 20.85
+    },
+    {
+     "label": "PROFIT",
+     "dir": "down",
+     "at": 22.9,
+     "strike_at": 23.55
+    }
+   ]
+  },
+  {
+   "type": "title_card",
+   "start": 24.45,
+   "end": 28.3,
+   "lines": [
+    "THREE",
+    "NUMBERS"
+   ],
+   "sub": {
+    "text": "every week",
+    "at": 25.7
+   },
+   "small_title": "THREE NUMBERS",
+   "phone_at": 26.5,
+   "expand_at": 27.9
+  },
+  {
+   "type": "nle_timeline",
+   "start": 28.3,
+   "end": 32.4,
+   "tracks": [
+    {
+     "label": "IN",
+     "at": 29.05,
+     "from": 0,
+     "to": 1.0
+    },
+    {
+     "label": "OWED",
+     "at": 30.45,
+     "from": 0.075,
+     "to": 0.7
+    },
+    {
+     "label": "LEFT",
+     "at": 31.95,
+     "from": 0.15,
+     "to": 0.375
+    }
+   ]
+  },
+  {
+   "type": "playing_grid",
+   "start": 32.4,
+   "end": 35.0,
+   "tiles": [
+    {
+     "label": "IN",
+     "at": 32.65,
+     "lag": 0
+    },
+    {
+     "label": "OWED",
+     "at": 33.85,
+     "lag": 0.7
+    },
+    {
+     "label": "LEFT?",
+     "at": 34.4,
+     "lag": 1.4
+    }
+   ]
+  },
+  {
+   "type": "film_look",
+   "start": 35.0,
+   "end": 37.55,
+   "label": "END OF MONTH",
+   "sublabel": "REEL 01"
+  },
+  {
+   "type": "reel_feed",
+   "start": 37.55,
+   "end": 40.45,
+   "back_at": 39.25,
+   "post": {
+    "title1": "NEW SALES",
+    "title2": "RECORD!",
+    "sub": "best month ever",
+    "handle": "@someone.else",
+    "caption": "we did it!!"
+   },
+   "own": {
+    "caption": "revenue is not cash"
+   }
+  },
+  {
+   "type": "eyedropper_grade",
+   "start": 40.45,
+   "end": 43.45,
+   "pick_at": 41.1,
+   "grade_at": 41.35,
+   "target_label": "MONEY GREEN"
+  },
+  {
+   "type": "grade_slider",
+   "start": 43.45,
+   "end": 45.75
+  },
+  {
+   "type": "video_card",
+   "start": 45.75,
+   "end": 47.85,
+   "title": "Part 2",
+   "meta": "coming soon"
+  },
+  {
+   "type": "comment_cta",
+   "start": 47.85,
+   "end": 50.0,
+   "keyword": "PART 2",
+   "type_at": 48.2,
+   "slam_at": 49.25,
+   "line": "Comment PART 2 + follow"
+  },
+  {
+   "type": "comment_drop",
+   "start": 50.0,
+   "end": null,
+   "keyword": "PART 2",
+   "like_at": 50.6,
+   "reply": {
+    "text": "Sent. Check your DMs.",
+    "at": 51.0
+   },
+   "line": "Comment PART 2 + follow"
+  }
+ ]
+}

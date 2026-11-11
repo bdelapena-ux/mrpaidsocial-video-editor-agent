@@ -21,7 +21,9 @@ gitignored `MASTER_CONTEXT.md`. The two never mix.
    <reference reel>", split these hooks, add hooks to this body, a revision on a delivered
    edit) through the **`video-edit-pipeline`** skill in `.claude/skills/`. It orchestrates
    the others — do not hand-roll the pipeline or jump straight into a specialist skill
-   unless the user's request is narrowly scoped to that one stage.
+   unless the user's request is narrowly scoped to that one stage. When a video arrives
+   without a named style, show the **STYLES.md** menu (plus MASTER_CONTEXT.md § Saved edit
+   styles) and ask which one before editing.
 3. **Media never lives in this repo.** Per-project working folders (`<slug>/` with the
    source, transcripts, comp, renders, `review/`, `_qa/`) go in the projects directory named
    in MASTER_CONTEXT.md — default `outputs/` here, but often a media folder in the user's own

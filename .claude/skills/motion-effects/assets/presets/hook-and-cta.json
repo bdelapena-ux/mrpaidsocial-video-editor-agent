@@ -1,0 +1,102 @@
+{
+ "_style": "Light touch for everyday reels: a kinetic hook, giant captions on the key words, karaoke captions throughout, comment CTA + comment drop at the end.",
+ "_how": "Recipe: keep the effect ORDER and kinds; replace every time with the words' real times and every text with the script's own idea. See references/effects.md.",
+ "source": "src/base.mp4",
+ "words": "src/words.json",
+ "output": "out/<slug>_v1.mp4",
+ "brand": {
+  "primary": "#2b4c67",
+  "accent": "#e8b446",
+  "light": "#f4efe6",
+  "dark": "#181e26",
+  "font_bold": "fonts/Display-Bold.ttf",
+  "handle": "@yourhandle"
+ },
+ "layout": {
+  "caption_cy": 1270,
+  "zone_cy": 1560,
+  "top_y": 70,
+  "checklist_y": 300
+ },
+ "captions": {
+  "enabled": true,
+  "fix": {}
+ },
+ "sound": {
+  "sfx": true,
+  "sfx_db": -12,
+  "lufs": -15
+ },
+ "effects": [
+  {
+   "type": "kinetic_hook",
+   "start": 0.0,
+   "end": 2.7,
+   "intro": [
+    "18 effects.",
+    "52 seconds."
+   ],
+   "lines": [
+    {
+     "text": "WE GREW",
+     "at": 0.15,
+     "size": 120
+    },
+    {
+     "text": "SALES",
+     "at": 1.1,
+     "size": 160
+    },
+    {
+     "text": "3X",
+     "at": 2.15,
+     "size": 250,
+     "color": "accent"
+    }
+   ]
+  },
+  {
+   "type": "giant_captions",
+   "start": 2.7,
+   "end": 5.8,
+   "items": [
+    {
+     "word": "NOBODY",
+     "sub": "warns you.",
+     "at": 2.7
+    },
+    {
+     "word": "GROWTH",
+     "sub": "costs money.",
+     "at": 4.000000000000001
+    },
+    {
+     "word": "CASH",
+     "sub": "is king.",
+     "at": 4.800000000000001
+    }
+   ]
+  },
+  {
+   "type": "comment_cta",
+   "start": 5.799999999999997,
+   "end": 7.95,
+   "keyword": "PART 2",
+   "type_at": 6.149999999999999,
+   "slam_at": 7.199999999999996,
+   "line": "Comment PART 2 + follow"
+  },
+  {
+   "type": "comment_drop",
+   "start": 7.950000000000003,
+   "end": null,
+   "keyword": "PART 2",
+   "like_at": 8.550000000000004,
+   "reply": {
+    "text": "Sent. Check your DMs.",
+    "at": 8.950000000000003
+   },
+   "line": "Comment PART 2 + follow"
+  }
+ ]
+}

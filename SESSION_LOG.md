@@ -635,3 +635,27 @@ publication step.
   C revenue-before-noon). Check sheet caught C as muddy + a cut-off body at the frame edge; fixed.
 - Lesson: v1's thumbnail text repeated the title word for word; the skill now requires the text to add
   what the title doesn't say.
+
+## 2026-11-10 — Teleprompter batch: one recording split into four reels (reel-recut)
+- One 5:51 selfie teleprompter take held four scripts. Cut it into per-script H.264 sections first, transcribed each section on its own (section-relative word times), and built one reel-recut spec per reel with the take selection as `manual_cuts`.
+- Two cuts planned from whisper word times were wrong: collapsed timestamps (several words sharing one start) ate a kept phrase at a tail cut and the word after a removed restart. Re-transcribing each OUTPUT and reading it as prose caught both. The fix came from a 50 ms RMS envelope plus an isolated-slice transcript, not from the word list.
+- Persistent banner at the default top position covers a selfie-framed face. Check a frame sheet of the RENDER, not of the raw, before choosing banner_cy; here it went to ~65% of frame height with captions just below.
+- Loudness: reel-recut output sat at -27 LUFS; a two-pass loudnorm with video stream-copy brought it to the -15 LUFS house target.
+- zsh gotcha in helper shells: `$var:l…` inside a filter string is a zsh modifier; brace the variable (`${var}`).
+- Skills touched: video-edit-pipeline, reel-recut. No review canvas (publisher not configured on this machine).
+
+## 2026-11-11 — Costa Rica trip reels (personal brand)
+- Source: Dropbox shared folder (51 Sony C82xx.mov, 4K 23.976 SDR, 7.6 GB; browser listing showed only 16, the zip had all).
+- Refs: two IG reels read in the in-app browser (frames via canvas): fast one-shot-per-beat montage with small serif two-line text; single candid shot with stacked IG-native text.
+- Shipped 4 reels to Drive "Costa Rica reels": pura-vida montage v2, clean sunset (text typed in-app by owner), work-from-paradise v2, trip recap v2, plus POSTING_NOTES.md.
+- QA: frames per shot, EBU R128 (-15 LUFS talking, -20 ambient, silent montage), whisper re-listen of each render caught a clipped "anticipated" and a swear on the end shot (muted).
+- Lessons: whisper word times on beach-music audio are unreliable and the RMS envelope is useless under music; transcribing short windows around a candidate edge found clean cut points.
+- Batch 2 (same day): 16 more short reels (5–13s) from the same footage: relatable hooks, montages, funny talking bits, work-from-anywhere. Drive folder now holds 20. specs via make_batch2.py; frame-sheet QA caught a stranger's child re-used in 5 reels and an overflowing one-line hook (fixed in v2s).
+- Owner registered a local "metapilot-native" MCP server (user scope) mid-session; it loads only in a new session.
+- Lesson: keep a per-project "never use" shot list (strangers' kids, drinks) and check every spec against it; one-line hooks over ~22 characters must wrap.
+
+## 2026-11-11 — 18-effect capability showcase
+- Pulled a reference TikTok listing 18 named effects (kinetic hook, gravity drop, giant captions, prompt bar, storyboard deck, icon strike, file drop, NLE timeline, jiggle delete, grade slider, eyedropper grade, film look, title card, playing grid, reel feed, video card, comment CTA, comment drop) and rebuilt all 18 on the clean cut of the "tripled revenue" teleprompter reel, in DLP navy/gold, timed to the script.
+- Project: ~/Video Projects/effects-showcase (fx.py = per-frame Pillow/numpy compositor piped through ffmpeg; sfx.py = code-synthesized SFX, no API spend). Master 51.9s at -14.9 LUFS / -2.4 dBTP plus 18 per-effect clips in clips/.
+- Lessons: whisper-cli needs `-ng` (CPU) inside the sandbox, because Metal allocation fails there. pip and yt-dlp need the sandbox off (TLS proxy). Find the face with a gridded frame BEFORE layout: the teleprompter framing puts the face at y 390-1180, so graphics belong on the chest (y 1330-1800) and wall.
+- Follow-up same day: turned the showcase into a reusable skill, **motion-effects**. `scripts/fx_engine.py` renders any of the 18 effects from one JSON spec (transcribe / face / stills / render [--clips]); four anonymised style recipes live in `assets/presets/` (showcase-18, hook-and-cta, explainer, cinematic). Added the root **STYLES.md** menu, and the pipeline's intake now asks which style before editing. Personal saved styles are listed in MASTER_CONTEXT.md § Saved edit styles. Re-rendering the showcase from its spec matched v1, and a hook-and-cta test on a second teleprompter reel rendered from scratch.

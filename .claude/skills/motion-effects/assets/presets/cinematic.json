@@ -1,0 +1,95 @@
+{
+ "_style": "Story/lesson reel with mood: gravity-drop hook, title card chapter, film look for the flashback, eyedropper regrade at the turn, before/after slider on the payoff.",
+ "_how": "Recipe: keep the effect ORDER and kinds; replace every time with the words' real times and every text with the script's own idea. See references/effects.md.",
+ "source": "src/base.mp4",
+ "words": "src/words.json",
+ "output": "out/<slug>_v1.mp4",
+ "brand": {
+  "primary": "#2b4c67",
+  "accent": "#e8b446",
+  "light": "#f4efe6",
+  "dark": "#181e26",
+  "font_bold": "fonts/Display-Bold.ttf",
+  "handle": "@yourhandle"
+ },
+ "layout": {
+  "caption_cy": 1270,
+  "zone_cy": 1560,
+  "top_y": 70,
+  "checklist_y": 300
+ },
+ "captions": {
+  "enabled": true,
+  "fix": {}
+ },
+ "sound": {
+  "sfx": true,
+  "sfx_db": -12,
+  "lufs": -15
+ },
+ "effects": [
+  {
+   "type": "gravity_drop",
+   "start": 0.0,
+   "end": 3.15,
+   "lead": {
+    "text": "and yet",
+    "at": 2.05
+   },
+   "groups": [
+    {
+     "text": "ONE YEAR",
+     "at": 0.19999999999999973,
+     "size": 170,
+     "stagger": 0.05,
+     "dur": 0.6,
+     "exit": 1.7999999999999998
+    },
+    {
+     "text": "NO PROFIT.",
+     "at": 2.25,
+     "size": 150,
+     "stagger": 0.04,
+     "dur": 0.45,
+     "exit": 2.92
+    }
+   ]
+  },
+  {
+   "type": "title_card",
+   "start": 3.1499999999999986,
+   "end": 7.0,
+   "lines": [
+    "THREE",
+    "NUMBERS"
+   ],
+   "sub": {
+    "text": "every week",
+    "at": 4.399999999999999
+   },
+   "small_title": "THREE NUMBERS",
+   "phone_at": 5.199999999999999,
+   "expand_at": 6.599999999999998
+  },
+  {
+   "type": "film_look",
+   "start": 7.0,
+   "end": 9.55,
+   "label": "END OF MONTH",
+   "sublabel": "REEL 01"
+  },
+  {
+   "type": "eyedropper_grade",
+   "start": 9.55,
+   "end": 12.55,
+   "pick_at": 10.2,
+   "grade_at": 10.45,
+   "target_label": "MONEY GREEN"
+  },
+  {
+   "type": "grade_slider",
+   "start": 12.55,
+   "end": null
+  }
+ ]
+}

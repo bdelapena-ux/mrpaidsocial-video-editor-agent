@@ -28,6 +28,9 @@ every real edit without ever carrying the edit's private details.
   ai-audio-sound-design/   # AI-actor footage → location ambience, room reverb, bleeps, watermark removal
   talking-head-image-overlays/  # uncut take + hard-cut overlays on nouns: title plate, inserts
                            #   above the eyeline, skeleton-UI cards, early CTA banner. No SFX.
+  motion-effects/          # 18 named effects (kinetic hook … comment drop) from one JSON spec;
+                           #   scripts/fx_engine.py (numpy+Pillow+ffmpeg, synthesized SFX),
+                           #   assets/presets/ = style recipes listed in STYLES.md
   broll-capture/           # real-website screenshots and scroll recordings
   openart-broll/           # generated b-roll / overlays via the OpenArt MCP
   arcads-broll/            # generated b-roll / overlays via the Arcads REST API
@@ -61,6 +64,7 @@ scripts/
 .github/workflows/        # Linux offline regression and synthetic integration CI
 footage/  outputs/         # gitignored conveniences for a standalone setup
 CLAUDE.md                  # session rules
+STYLES.md                  # the edit-style menu Claude shows when a video arrives
 MASTER_CONTEXT.template.md # → MASTER_CONTEXT.md (gitignored): brand, defaults, projects dir, learnings
 SESSION_LOG.md             # dated session history
 SETUP.md                   # every tool + API with a CHECK and a FIX

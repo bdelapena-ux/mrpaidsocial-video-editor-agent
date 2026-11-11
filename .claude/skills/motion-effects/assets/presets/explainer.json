@@ -1,0 +1,182 @@
+{
+ "_style": "Teach-a-concept reel: hook, a prompt bar for the question, storyboard + jiggle delete for the list, timeline for the parts, icon strike for the mistake, video card + comment CTA to close.",
+ "_how": "Recipe: keep the effect ORDER and kinds; replace every time with the words' real times and every text with the script's own idea. See references/effects.md.",
+ "source": "src/base.mp4",
+ "words": "src/words.json",
+ "output": "out/<slug>_v1.mp4",
+ "brand": {
+  "primary": "#2b4c67",
+  "accent": "#e8b446",
+  "light": "#f4efe6",
+  "dark": "#181e26",
+  "font_bold": "fonts/Display-Bold.ttf",
+  "handle": "@yourhandle"
+ },
+ "layout": {
+  "caption_cy": 1270,
+  "zone_cy": 1560,
+  "top_y": 70,
+  "checklist_y": 300
+ },
+ "captions": {
+  "enabled": true,
+  "fix": {}
+ },
+ "sound": {
+  "sfx": true,
+  "sfx_db": -12,
+  "lufs": -15
+ },
+ "effects": [
+  {
+   "type": "kinetic_hook",
+   "start": 0.0,
+   "end": 2.7,
+   "intro": [
+    "18 effects.",
+    "52 seconds."
+   ],
+   "lines": [
+    {
+     "text": "WE GREW",
+     "at": 0.15,
+     "size": 120
+    },
+    {
+     "text": "SALES",
+     "at": 1.1,
+     "size": 160
+    },
+    {
+     "text": "3X",
+     "at": 2.15,
+     "size": 250,
+     "color": "accent"
+    }
+   ]
+  },
+  {
+   "type": "prompt_bar",
+   "start": 2.7,
+   "end": 5.25,
+   "text": "is revenue the same as profit?",
+   "type_at": 2.8000000000000016,
+   "type_dur": 1.15,
+   "send_at": 4.050000000000002,
+   "answer": "Nope. Not even close.",
+   "answer_at": 4.250000000000001
+  },
+  {
+   "type": "storyboard",
+   "start": 5.25,
+   "end": 8.8,
+   "header": "WHERE IT GOES",
+   "cards": [
+    {
+     "label": "ADS",
+     "at": 5.300000000000001,
+     "frame_t": 3
+    },
+    {
+     "label": "STAFF",
+     "at": 6.1,
+     "frame_t": 10
+    },
+    {
+     "label": "TOOLS",
+     "at": 6.800000000000001,
+     "frame_t": 22
+    },
+    {
+     "label": "RENT",
+     "at": 7.600000000000001,
+     "frame_t": 30
+    }
+   ]
+  },
+  {
+   "type": "jiggle_delete",
+   "start": 8.8,
+   "end": 10.8,
+   "delete_at": 9.8,
+   "icons": [
+    {
+     "label": "ADS",
+     "glyph": "$"
+    },
+    {
+     "label": "STAFF"
+    },
+    {
+     "label": "TOOLS"
+    },
+    {
+     "label": "RENT"
+    }
+   ]
+  },
+  {
+   "type": "nle_timeline",
+   "start": 10.8,
+   "end": 14.9,
+   "tracks": [
+    {
+     "label": "IN",
+     "at": 11.55,
+     "from": 0,
+     "to": 1.0
+    },
+    {
+     "label": "OWED",
+     "at": 12.95,
+     "from": 0.075,
+     "to": 0.7
+    },
+    {
+     "label": "LEFT",
+     "at": 14.45,
+     "from": 0.15,
+     "to": 0.375
+    }
+   ]
+  },
+  {
+   "type": "icon_strike",
+   "start": 14.9,
+   "end": 18.8,
+   "word": {
+    "text": "forgot.",
+    "at": 18.0
+   },
+   "icons": [
+    {
+     "label": "SALES",
+     "dir": "up",
+     "at": 15.200000000000001
+    },
+    {
+     "label": "PROFIT",
+     "dir": "down",
+     "at": 17.25,
+     "strike_at": 17.9
+    }
+   ]
+  },
+  {
+   "type": "video_card",
+   "start": 18.8,
+   "end": 20.9,
+   "title": "Part 2",
+   "meta": "coming soon"
+  },
+  {
+   "type": "comment_cta",
+   "start": 20.9,
+   "end": null,
+   "keyword": "PART 2",
+   "type_at": 21.25,
+   "slam_at": 22.299999999999997,
+   "line": "Comment PART 2 + follow"
+  }
+ ]
+}

@@ -45,6 +45,13 @@ empty fields get offered for population as work reveals the answers.
 - **Raw footage queue(s):** (where new recordings land)
 - **Named past edits** (for "edit it like X" requests): (slug → what it was)
 
+## Saved edit styles
+
+Styles you liked, reused by name ("use my <name> style"). One line each:
+`<name>` — skill — path to the spec/recipe — what it is for.
+
+- 
+
 ## Hard rules (the regimes this reviewer holds you to)
 
 - **Face rule:** (e.g. "never place a graphic over the speaker's face")

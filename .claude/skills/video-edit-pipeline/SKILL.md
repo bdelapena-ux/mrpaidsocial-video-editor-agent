@@ -8,7 +8,7 @@ description: >
   clip into a finished reel", "do the full edit", "make this look like their
   winning ads", or a revision request on a previously delivered edit. It routes
   every stage to the right specialist skill (reel-style-clone, branded-ad-edit,
-  reel-recut, arcads-video-edit, recap-video, talking-head-image-overlays, hook-splitter, edits-hook-overlay,
+  reel-recut, arcads-video-edit, recap-video, talking-head-image-overlays, motion-effects, hook-splitter, edits-hook-overlay,
   sound-design, ai-audio-sound-design,
   video-qa, video-review-canvas, edl-tighten, hook-variations, naming-convention,
   capcut-export) and
@@ -81,7 +81,15 @@ invalidates downstream work when inputs change. See
 [project tools](references/project-tools.md) for commands, optional-stage handling and
 the shared footage catalog. These receipts add no user approval gates.
 
-5. **Which lane.** Decide from what was handed over, before Stage 1:
+5. **Ask which edit style, unless the request already names one.** Read `STYLES.md` at the
+   pack root and `MASTER_CONTEXT.md` § Saved edit styles. Then ask with one multiple-choice question:
+   put the user's saved styles first, then the effects styles (18-effect showcase, hook + CTA,
+   explainer, cinematic), then the other lanes as "Other". The answer picks the lane below.
+   A saved style reuses its spec as the starting recipe.
+6. **Which lane.** Decide from the chosen style and what was handed over, before Stage 1:
+   - an **effects style** (showcase-18, hook + CTA, explainer, cinematic, or named effects
+     like "prompt bar", "jiggle delete", "film look") → make the base cut, then
+     **motion-effects**, then Stages 4–6.
    - a **single talking head + a brand** → Stages 1–7 below (branded-ad-edit).
    - the creator's **own signature reel look** (banner, karaoke captions, callouts,
      silence-cut pacing) → **reel-recut**, then Stages 4–6.
@@ -299,6 +307,7 @@ draft opens before telling the user it is ready.
 | Native Instagram (Edits) text hook typed once on the phone, lifted as a PNG and burned onto many videos | edits-hook-overlay |
 | AI-actor footage: ambience, room reverb, bleeps, watermark whine, loudness master | ai-audio-sound-design |
 | Uncut take + hard-cut image overlays on content nouns (title plate, inserts above the eyeline, skeleton-UI cards, early CTA banner) | talking-head-image-overlays |
+| Named motion effects from one spec (kinetic hook, prompt bar, storyboard deck, jiggle delete, title card, film look, reel feed, grade slider, comment CTA…), saved effects styles | motion-effects |
 | Layered export to a CapCut draft | capcut-export |
 | YouTube thumbnail / cover image, A/B thumbnail variants, thumbnail critique | youtube-thumbnail |
 
